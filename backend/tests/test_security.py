@@ -60,3 +60,25 @@ def test_analysis_persists_metadata_without_original_message(monkeypatch):
     assert len(saved_records) == 1
     assert "message" not in saved_records[0]
     assert original_message not in repr(saved_records[0])
+
+
+def test_analysis_response_and_history_use_effective_risk(monkeypatch):
+    saved_records = []
+    monkeypatch.setattr(analysis_routes, "save_history_record", saved_records.append)
+
+    result = asyncio.run(
+        analysis_routes.analyze_message_endpoint(
+            AnalysisRequest(
+                message=(
+                    "Your account will be blocked in 10 minutes. "
+                    "Share your OTP immediately."
+                ),
+                channel="SMS",
+            )
+        )
+    )
+
+    assert result["effective_risk_score"] == result["context_score"]
+    assert result["effective_risk_level"] == "HIGH RISK"
+    assert saved_records[0]["risk_score"] == result["effective_risk_score"]
+    assert saved_records[0]["risk_level"] == result["effective_risk_level"]

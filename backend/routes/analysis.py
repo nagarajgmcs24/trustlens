@@ -33,14 +33,15 @@ async def analyze_message_endpoint(payload: AnalysisRequest):
         language=payload.language,
         sender_name=payload.sender_name,
         sender_email=payload.sender_email,
+        claimed_organization=payload.claimed_organization,
     )
 
     save_history_record({
         "analysis_id": result["analysis_id"],
         "timestamp": result["timestamp"],
         "channel": payload.channel,
-        "risk_level": result["risk_level"],
-        "risk_score": result["risk_score"],
+        "risk_level": result["effective_risk_level"],
+        "risk_score": result["effective_risk_score"],
         "detected_categories": result["detected_categories"],
     })
 

@@ -1,0 +1,49 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.14.4, pytest-9.2.0, pluggy-1.7.0 -- C:\TRUSTLENS\backend\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\TRUSTLENS\backend
+plugins: anyio-4.15.1
+collecting ... collected 2 items
+
+tests/test_context_engine.py::TestFalsePositivePrevention::test_otp_warning_not_sharing_is_low_risk FAILED [ 50%]
+tests/test_context_engine.py::TestFalsePositivePrevention::test_hr_email_with_joining_date_is_low_risk FAILED [100%]
+
+================================== FAILURES ===================================
+____ TestFalsePositivePrevention.test_otp_warning_not_sharing_is_low_risk _____
+
+self = <test_context_engine.TestFalsePositivePrevention object at 0x00000261A3DAD5B0>
+
+    def test_otp_warning_not_sharing_is_low_risk(self):
+        """A message warning NOT to share OTP is not a credential theft attempt."""
+        result = analyze_message(
+            "Security alert: An OTP was sent to your phone. "
+            "NEVER share your OTP with anyone, including bank staff.",
+            language="English",
+        )
+>       assert "sensitive_info" not in _categories(result)
+E       AssertionError: assert 'sensitive_info' not in {'sensitive_info'}
+E        +  where {'sensitive_info'} = _categories({'analysis_id': 'TRUST-20261030171801419067', 'timestamp': '2026-10-30T17:18:01.419114+00:00', 'channel': 'Other', 'language': 'English', ...})
+
+tests\test_context_engine.py:637: AssertionError
+___ TestFalsePositivePrevention.test_hr_email_with_joining_date_is_low_risk ___
+
+self = <test_context_engine.TestFalsePositivePrevention object at 0x00000261A3DF89E0>
+
+    def test_hr_email_with_joining_date_is_low_risk(self):
+        """An HR joining date message must not be flagged."""
+        result = analyze_message(
+            "Congratulations! Your joining date is confirmed for 15 November. "
+            "No advance payment required. Report to HR at 9 AM.",
+            language="English",
+        )
+>       assert _base_level(result) == "LOW RISK"
+E       AssertionError: assert 'MEDIUM RISK' == 'LOW RISK'
+E         
+E         - LOW RISK
+E         + MEDIUM RISK
+
+tests\test_context_engine.py:655: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_context_engine.py::TestFalsePositivePrevention::test_otp_warning_not_sharing_is_low_risk
+FAILED tests/test_context_engine.py::TestFalsePositivePrevention::test_hr_email_with_joining_date_is_low_risk
+============================== 2 failed in 0.25s ==============================

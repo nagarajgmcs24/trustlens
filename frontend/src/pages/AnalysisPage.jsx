@@ -12,6 +12,7 @@ export default function AnalysisPage() {
   const [channel, setChannel] = useState('SMS')
   const [language, setLanguage] = useState('English')
   const [senderName, setSenderName] = useState('')
+  const [claimedOrganization, setClaimedOrganization] = useState('')
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState('')
 
@@ -32,7 +33,9 @@ export default function AnalysisPage() {
         message: cleanedMessage,
         channel,
         language,
-        sender_name: senderName.trim() || undefined,
+        sender_name: senderName.trim() && !senderName.includes('@') ? senderName.trim() : undefined,
+        sender_email: senderName.includes('@') ? senderName.trim() : undefined,
+        claimed_organization: claimedOrganization.trim() || undefined,
       })
 
       const history = JSON.parse(localStorage.getItem('trustlensHistory') || '[]')
@@ -42,8 +45,8 @@ export default function AnalysisPage() {
           analysis_id: result.analysis_id,
           timestamp: result.timestamp,
           channel: result.channel,
-          risk_level: result.risk_level,
-          risk_score: result.risk_score,
+          risk_level: result.effective_risk_level || result.risk_level,
+          risk_score: result.effective_risk_score ?? result.context_score ?? result.risk_score,
           detected_categories: result.detected_categories,
         },
       ]
@@ -61,6 +64,7 @@ export default function AnalysisPage() {
   function clearForm() {
     setMessage('')
     setSenderName('')
+    setClaimedOrganization('')
     setError('')
   }
 
@@ -134,14 +138,29 @@ export default function AnalysisPage() {
             </div>
 
             <div>
+              <label htmlFor="claimedOrganization" className="mb-2 block text-sm font-medium text-slate-200">
+                Organization claimed in message (optional)
+              </label>
+              <input
+                id="claimedOrganization"
+                value={claimedOrganization}
+                onChange={(event) => setClaimedOrganization(event.target.value)}
+                placeholder="e.g. HDFC Bank or UIDAI"
+                maxLength={120}
+                className="w-full rounded-xl border border-white/10 bg-slate-950/60 p-3 text-slate-100 outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20"
+              />
+            </div>
+
+            <div>
               <label htmlFor="senderName" className="mb-2 block text-sm font-medium text-slate-200">
-                Sender name or address (optional)
+                Sender name or email address (optional)
               </label>
               <input
                 id="senderName"
                 value={senderName}
                 onChange={(event) => setSenderName(event.target.value)}
                 placeholder="e.g. ICICI Bank Support or support@fakebank.co"
+                maxLength={200}
                 className="w-full rounded-xl border border-white/10 bg-slate-950/60 p-3 text-slate-100 outline-none transition focus:border-violet-500 focus:ring-2 focus:ring-violet-500/20"
               />
             </div>

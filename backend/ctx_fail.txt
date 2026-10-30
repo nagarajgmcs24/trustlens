@@ -1,0 +1,41 @@
+﻿........................................................................ [ 86%]
+...F.F.....                                                              [100%]
+================================== FAILURES ===================================
+____ TestFalsePositivePrevention.test_otp_warning_not_sharing_is_low_risk _____
+
+self = <test_context_engine.TestFalsePositivePrevention object at 0x0000028BCE6656D0>
+
+    def test_otp_warning_not_sharing_is_low_risk(self):
+        """A message warning NOT to share OTP is not a credential theft attempt."""
+        result = analyze_message(
+            "Security alert: An OTP was sent to your phone. "
+            "NEVER share your OTP with anyone, including bank staff.",
+            language="English",
+        )
+>       assert "sensitive_info" not in _categories(result)
+E       AssertionError: assert 'sensitive_info' not in {'sensitive_info'}
+E        +  where {'sensitive_info'} = _categories({'analysis_id': 'TRUST-20261030171747534015', 'timestamp': '2026-10-30T17:17:47.534039+00:00', 'channel': 'Other', 'language': 'English', ...})
+
+tests\test_context_engine.py:637: AssertionError
+___ TestFalsePositivePrevention.test_hr_email_with_joining_date_is_low_risk ___
+
+self = <test_context_engine.TestFalsePositivePrevention object at 0x0000028BCE5EF570>
+
+    def test_hr_email_with_joining_date_is_low_risk(self):
+        """An HR joining date message must not be flagged."""
+        result = analyze_message(
+            "Congratulations! Your joining date is confirmed for 15 November. "
+            "No advance payment required. Report to HR at 9 AM.",
+            language="English",
+        )
+>       assert _base_level(result) == "LOW RISK"
+E       AssertionError: assert 'MEDIUM RISK' == 'LOW RISK'
+E         
+E         - LOW RISK
+E         + MEDIUM RISK
+
+tests\test_context_engine.py:655: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_context_engine.py::TestFalsePositivePrevention::test_otp_warning_not_sharing_is_low_risk
+FAILED tests/test_context_engine.py::TestFalsePositivePrevention::test_hr_email_with_joining_date_is_low_risk
+2 failed, 81 passed in 0.69s

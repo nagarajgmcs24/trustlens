@@ -1,10 +1,16 @@
 import { useLocation, useNavigate } from 'react-router-dom'
-import { ArrowLeft, CheckCircle2, AlertTriangle, ExternalLink, ShieldAlert } from 'lucide-react'
+import { ArrowLeft, AlertTriangle, ExternalLink, ShieldAlert, ShieldCheck, Eye } from 'lucide-react'
 
 const riskColors = {
   'LOW RISK': 'bg-emerald-500/15 text-emerald-200 border-emerald-500/30',
   'MEDIUM RISK': 'bg-amber-500/15 text-amber-200 border-amber-500/30',
   'HIGH RISK': 'bg-red-500/15 text-red-200 border-red-500/30',
+}
+
+const riskIcons = {
+  'LOW RISK': <ShieldCheck className="h-4 w-4" />,
+  'MEDIUM RISK': <AlertTriangle className="h-4 w-4" />,
+  'HIGH RISK': <AlertTriangle className="h-4 w-4" />,
 }
 
 export default function ResultsPage() {
@@ -43,18 +49,19 @@ export default function ResultsPage() {
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-violet-300">Risk report</p>
-            <h1 className="mt-2 text-3xl font-bold text-white">{analysis.risk_level}</h1>
+            <h1 className="mt-2 text-3xl font-bold text-white">{analysis.effective_risk_level || analysis.risk_level}</h1>
           </div>
-          <div className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold ${riskColors[analysis.risk_level]}`}>
-            {analysis.risk_level === 'HIGH RISK' ? <AlertTriangle className="h-4 w-4" /> : <CheckCircle2 className="h-4 w-4" />}
-            {analysis.risk_score}/100
+          <div className={`inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold ${riskColors[analysis.effective_risk_level || analysis.risk_level]}`}>
+            {riskIcons[analysis.effective_risk_level || analysis.risk_level]}
+            {analysis.effective_risk_level || analysis.risk_level}
           </div>
         </div>
 
-        <div className="mt-6 grid gap-5 md:grid-cols-3">
-          <MetricCard label="Score" value={`${analysis.risk_score}/100`} color="text-violet-300" />
-          <MetricCard label="Category" value={analysis.risk_level} color="text-cyan-300" />
-          <MetricCard label="Threat groups" value={analysis.detected_categories.length || 'None'} color="text-amber-300" />
+        <div className="mt-6 grid gap-5 md:grid-cols-4">
+          <MetricCard label="Final Risk Score" value={`${analysis.effective_risk_score ?? analysis.context_score ?? analysis.risk_score}/100`} color="text-violet-300" />
+          <MetricCard label="Evidence Score" value={`${analysis.risk_score}/100`} color="text-cyan-300" />
+          <MetricCard label="Effective Level" value={analysis.effective_risk_level || analysis.risk_level} color="text-amber-300" />
+          <MetricCard label="Threat groups" value={analysis.detected_categories.length || 'None'} color="text-rose-300" />
         </div>
         <div className="mt-5 flex flex-wrap gap-3 text-sm text-slate-300">
           <span className="rounded-full border border-white/10 bg-slate-950/50 px-3 py-1">Source: {analysis.channel || 'Other'}</span>
@@ -101,7 +108,7 @@ export default function ResultsPage() {
                   <li key={`${item.category}-${index}`} className="rounded-xl border border-white/10 bg-slate-900/40 p-3">
                     <div className="flex flex-wrap items-center justify-between gap-2">
                       <span className="font-medium text-violet-200">{item.category}</span>
-                      <span className="rounded-full bg-slate-800 px-2 py-1 text-xs text-slate-300">+{item.points_contributed ?? item.weight} points</span>
+                      <span className="rounded-full bg-slate-800 px-2 py-1 text-xs text-slate-300">+{item.points_contributed ?? item.weight} pts</span>
                     </div>
                     <p className="mt-2 text-sm text-slate-300">
                       Matched: <span className="font-medium text-white">{item.matched_phrase || item.reason}</span>
@@ -121,6 +128,61 @@ export default function ResultsPage() {
               <p className="text-slate-400">No specific risk evidence matched the current rules.</p>
             )}
           </Panel>
+
+          {analysis.context_combinations?.length > 0 && (
+            <Panel title="Context combination patterns">
+              <ul className="space-y-3">
+                {analysis.context_combinations.map((combo, i) => (
+                  <li key={i} className="rounded-xl border border-cyan-500/20 bg-cyan-500/5 p-3">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <span className="font-medium text-cyan-200">{combo.name.replace(/_/g, ' ')}</span>
+                      <span className="rounded-full bg-cyan-900/40 px-2 py-1 text-xs text-cyan-300">
+                        {combo.bonus_applied === false
+                          ? 'Overlapping signals; no extra points'
+                          : `+${combo.points_contributed ?? combo.bonus} pts contributed`}
+                      </span>
+                    </div>
+                    <div className="mt-2 flex flex-wrap gap-1">
+                      {combo.triggered_by?.map((cat) => (
+                        <span key={cat} className="rounded-full bg-slate-800 px-2 py-0.5 text-xs text-slate-300">{cat}</span>
+                      ))}
+                    </div>
+                    <p className="mt-2 text-sm text-slate-300">{combo.narrative}</p>
+                  </li>
+                ))}
+              </ul>
+            </Panel>
+          )}
+
+          {analysis.signal_summary?.length > 0 && (
+            <Panel title="How signals contributed to risk">
+              <ul className="space-y-2">
+                {analysis.signal_summary.map((item, i) => (
+                  <li key={i} className="flex items-center gap-2 rounded-lg border border-white/10 bg-slate-900/40 px-3 py-2 text-sm text-slate-300">
+                    <Eye className="h-3.5 w-3.5 shrink-0 text-violet-400" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </Panel>
+          )}
+
+          {analysis.sender_analysis?.is_suspicious && (
+            <Panel title="Sender identity warnings">
+              <ul className="space-y-2">
+                {analysis.sender_analysis.reasons?.map((reason, i) => (
+                  <li key={i} className="rounded-xl border border-amber-500/20 bg-amber-500/5 p-3 text-sm text-amber-100">
+                    {reason}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {analysis.sender_analysis.indicators?.map((ind) => (
+                  <span key={ind} className="rounded-full border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 text-xs text-amber-200">{ind.replace(/_/g, ' ')}</span>
+                ))}
+              </div>
+            </Panel>
+          )}
 
           <Panel title="Suspicious keywords">
             <div className="flex flex-wrap gap-2">
@@ -162,7 +224,9 @@ export default function ResultsPage() {
 
           <Panel title="Original message">
             <div className="rounded-2xl border border-white/10 bg-slate-950/50 p-4 text-sm text-slate-300">
+              {analysis.claimed_organization ? <p className="mb-2 text-violet-200">Claimed organization: {analysis.claimed_organization}</p> : null}
               {analysis.sender_name ? <p className="mb-2 text-violet-200">Sender: {analysis.sender_name}</p> : null}
+              {analysis.sender_email ? <p className="mb-2 text-violet-200">Sender email: {analysis.sender_email}</p> : null}
               <p className="whitespace-pre-wrap">{originalMessage || 'Original message is not stored. Start a new analysis to review its contents.'}</p>
             </div>
           </Panel>

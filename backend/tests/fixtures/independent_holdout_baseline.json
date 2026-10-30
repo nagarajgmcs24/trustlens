@@ -1,0 +1,2688 @@
+{
+  "dataset": "independent_holdout_messages.json",
+  "total_cases": 100,
+  "overall": {
+    "total": 100,
+    "tp": 28,
+    "tn": 46,
+    "fp": 2,
+    "fn": 24,
+    "precision": 0.9333,
+    "recall": 0.5385,
+    "f1": 0.6829,
+    "confusion_matrix": [
+      [
+        28,
+        24
+      ],
+      [
+        2,
+        46
+      ]
+    ]
+  },
+  "by_language": {
+    "English": {
+      "total": 25,
+      "tp": 7,
+      "tn": 11,
+      "fp": 1,
+      "fn": 6,
+      "precision": 0.875,
+      "recall": 0.5385,
+      "f1": 0.6667,
+      "confusion_matrix": [
+        [
+          7,
+          6
+        ],
+        [
+          1,
+          11
+        ]
+      ]
+    },
+    "Hindi": {
+      "total": 25,
+      "tp": 6,
+      "tn": 12,
+      "fp": 0,
+      "fn": 7,
+      "precision": 1.0,
+      "recall": 0.4615,
+      "f1": 0.6316,
+      "confusion_matrix": [
+        [
+          6,
+          7
+        ],
+        [
+          0,
+          12
+        ]
+      ]
+    },
+    "Kannada": {
+      "total": 25,
+      "tp": 6,
+      "tn": 11,
+      "fp": 1,
+      "fn": 7,
+      "precision": 0.8571,
+      "recall": 0.4615,
+      "f1": 0.6,
+      "confusion_matrix": [
+        [
+          6,
+          7
+        ],
+        [
+          1,
+          11
+        ]
+      ]
+    },
+    "Mixed": {
+      "total": 25,
+      "tp": 9,
+      "tn": 12,
+      "fp": 0,
+      "fn": 4,
+      "precision": 1.0,
+      "recall": 0.6923,
+      "f1": 0.8182,
+      "confusion_matrix": [
+        [
+          9,
+          4
+        ],
+        [
+          0,
+          12
+        ]
+      ]
+    }
+  },
+  "by_category": {
+    "OTP theft": {
+      "total": 4,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 4,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "account notification": {
+      "total": 4,
+      "tp": 0,
+      "tn": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    "account takeover": {
+      "total": 4,
+      "tp": 3,
+      "tn": 0,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "confusion_matrix": [
+        [
+          3,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "account threat": {
+      "total": 4,
+      "tp": 2,
+      "tn": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "confusion_matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "bank impersonation": {
+      "total": 4,
+      "tp": 4,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "bank notification": {
+      "total": 8,
+      "tp": 0,
+      "tn": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ]
+    },
+    "college announcement": {
+      "total": 8,
+      "tp": 0,
+      "tn": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ]
+    },
+    "government impersonation": {
+      "total": 8,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 8,
+      "precision": 0,
+      "recall": 0.0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "job fee scam": {
+      "total": 4,
+      "tp": 4,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "job notification": {
+      "total": 8,
+      "tp": 0,
+      "tn": 8,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ]
+    },
+    "normal URL": {
+      "total": 4,
+      "tp": 0,
+      "tn": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    "normal message": {
+      "total": 4,
+      "tp": 0,
+      "tn": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    "password theft": {
+      "total": 4,
+      "tp": 4,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "confusion_matrix": [
+        [
+          4,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "payment notification": {
+      "total": 4,
+      "tp": 0,
+      "tn": 4,
+      "fp": 0,
+      "fn": 0,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          4
+        ]
+      ]
+    },
+    "payment scam": {
+      "total": 4,
+      "tp": 1,
+      "tn": 0,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.25,
+      "f1": 0.4,
+      "confusion_matrix": [
+        [
+          1,
+          3
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "prize scam": {
+      "total": 8,
+      "tp": 6,
+      "tn": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571,
+      "confusion_matrix": [
+        [
+          6,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "registration fee scam": {
+      "total": 4,
+      "tp": 2,
+      "tn": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "confusion_matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    },
+    "safety warning": {
+      "total": 8,
+      "tp": 0,
+      "tn": 6,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": 0,
+      "f1": 0,
+      "confusion_matrix": [
+        [
+          0,
+          0
+        ],
+        [
+          2,
+          6
+        ]
+      ]
+    },
+    "suspicious URL": {
+      "total": 4,
+      "tp": 2,
+      "tn": 0,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6667,
+      "confusion_matrix": [
+        [
+          2,
+          2
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    }
+  },
+  "false_positives": [
+    {
+      "id": "ho-en-21",
+      "language": "English",
+      "selected_language": "English",
+      "category": "safety warning",
+      "expected": "legitimate",
+      "predicted": "suspicious",
+      "message": "If a text urges you to reveal a password, ignore its link and visit the service through your saved bookmark.",
+      "effective_risk_score": 30,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info"
+      ],
+      "matched_evidence": [
+        {
+          "category": "sensitive_info",
+          "phrase": "password + text",
+          "language": "English",
+          "points": 30
+        },
+        {
+          "category": "sensitive_info",
+          "phrase": "password + text",
+          "language": "Kannada",
+          "points": 30
+        }
+      ]
+    },
+    {
+      "id": "ho-kn-21",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "safety warning",
+      "expected": "legitimate",
+      "predicted": "suspicious",
+      "message": "ಅಪರಿಚಿತ ಸಂದೇಶವು ಗುಪ್ತಪದ ಕೇಳಿದರೆ ಅದರ ವಿಳಾಸ ತೆರೆಯಬೇಡಿ; ಅಧಿಕೃತ ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದಲೇ ಖಾತೆ ಪರಿಶೀಲಿಸಿ.",
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "account_verification",
+        "sensitive_info"
+      ],
+      "matched_evidence": [
+        {
+          "category": "account_verification",
+          "phrase": "ಖಾತೆ ಪರಿಶೀಲಿಸಿ",
+          "language": "Kannada",
+          "points": 15
+        },
+        {
+          "category": "sensitive_info",
+          "phrase": "ಗುಪ್ತಪದ + ಕೇಳಿ",
+          "language": "Kannada",
+          "points": 30
+        }
+      ]
+    }
+  ],
+  "false_negatives": [
+    {
+      "id": "ho-en-01",
+      "language": "English",
+      "selected_language": "English",
+      "category": "OTP theft",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "The courier cannot release your returned parcel until you read the six numbers in the text message to the driver.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-en-05",
+      "language": "English",
+      "selected_language": "English",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "The county assistance office has reserved a household rebate for you. Upload your bank login on http://benefit-check.invalid/apply to receive it.",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "http://benefit-check.invalid/apply",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-en-06",
+      "language": "English",
+      "selected_language": "English",
+      "category": "registration fee scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "Your interview is waived and the factory placement is guaranteed once you buy the required safety badge from our coordinator.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-en-09",
+      "language": "English",
+      "selected_language": "English",
+      "category": "suspicious URL",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "Security team asks you to review an unfamiliar sign-in at https://bit.ly/session-verify and enter the passcode there.",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "https://bit.ly/session-verify",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-en-10",
+      "language": "English",
+      "selected_language": "English",
+      "category": "payment scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "The utility refund is waiting, but the service charge must be transferred before midnight or the credit is cancelled.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "charge + transfer",
+          "language": "Hindi",
+          "points": 20
+        },
+        {
+          "category": "payment_request",
+          "phrase": "charge + transfer",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-en-12",
+      "language": "English",
+      "selected_language": "English",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "A message from the pension desk says a benefit is approved but asks for a small file-opening payment to unlock the funds.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "payment + pay",
+          "language": "Hindi",
+          "points": 20
+        },
+        {
+          "category": "payment_request",
+          "phrase": "payment + pay",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-01",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "OTP theft",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "कूरियर वाला कह रहा है कि पार्सल लौटने से रोकने के लिए फोन पर आया छह अंकों का नंबर उसे बताना होगा।",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-hi-05",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "जिला राहत कार्यालय से लाभ राशि तैयार होने का संदेश आया है; इसे जारी कराने के लिए बैंक लॉगिन इस साइट पर दें: http://relief-portal.invalid/form",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "http://relief-portal.invalid/form",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-06",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "registration fee scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "बिना परीक्षा पक्की नियुक्ति मिलेगी; नियुक्ति पत्र खोलने के लिए समन्वयक को वर्दी किट का पैसा भेजें।",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-hi-09",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "suspicious URL",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "नए लॉगिन की जाँच के नाम पर https://tinyurl.com/account-care खोलकर अपना गुप्त कोड डालने को कहा गया है।",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "https://tinyurl.com/account-care",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-10",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "payment scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "आपकी बिजली जमा राशि वापस मिलेगी, लेकिन पहले आज रात सेवा खर्च भेजना जरूरी बताया गया है।",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "जमा राशि + जमा",
+          "language": "Hindi",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-12",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "पेंशन सहायता केंद्र ने सहायता मंजूर बताई है, मगर रकम पाने से पहले फाइल शुल्क जमा करने को कहा है।",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "रकम + जमा",
+          "language": "Hindi",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-13",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "prize scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "खरीदारी प्रतियोगिता में विजेता चुने जाने का दावा है। पुरस्कार भेजने के लिए बैंक खाता और सुरक्षा अंक माँगे गए हैं।",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-kn-01",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "OTP theft",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ಕೊರಿಯರ್ ತಲುಪಿಸಲು ನಿಮ್ಮ ಫೋನ್‌ಗೆ ಬಂದ ಆರು ಅಂಕಿಗಳನ್ನು ಚಾಲಕನಿಗೆ ಓದಿ ಹೇಳಬೇಕೆಂದು ಸಂದೇಶ ಬಂದಿದೆ.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-kn-04",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "account takeover",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್‌ಗೆ ಮತ್ತೊಂದು ಸಾಧನ ಸೇರಿದೆ. ಬದಲಾವಣೆ ಹಿಂತೆಗೆದುಕೊಳ್ಳಲು ಕರೆ ಮಾಡಿದವರಿಗೆ ಮರುಪಡೆಯುವ ಗುಪ್ತ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿ.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-kn-05",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ತಾಲೂಕು ನೆರವು ಕಚೇರಿ ಪರಿಹಾರ ಹಣ ಸಿದ್ಧವೆಂದು ಹೇಳಿದೆ; ಪಡೆಯಲು ಬ್ಯಾಂಕ್ ಪ್ರವೇಶ ಮಾಹಿತಿಯನ್ನು ಈ ಜಾಲತಾಣದಲ್ಲಿ ತುಂಬಿ: http://aid-check.invalid/verify",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "http://aid-check.invalid/verify",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-kn-10",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "payment scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ನಿಮ್ಮ ಶುಲ್ಕ ಮರುಪಾವತಿ ಸಿದ್ಧವಿದೆ, ಆದರೆ ಅದನ್ನು ಪಡೆಯುವ ಮೊದಲು ಸೇವಾ ವೆಚ್ಚವನ್ನು ಇಂದೇ ವರ್ಗಾಯಿಸಬೇಕಂತೆ.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "ಶುಲ್ಕ + ಪಾವತಿ",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-kn-11",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "account threat",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಪರ್ಸ್‌ನಿಂದ ಹಣ ಕಳುಹಿಸುವ ಸೌಲಭ್ಯವನ್ನು ಸ್ವಲ್ಪದಲ್ಲೇ ನಿಲ್ಲಿಸಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಸಲು ಪಿನ್ ನೀಡಿ.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "ಹಣ + ಕಳುಹಿ",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-kn-12",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ಪಿಂಚಣಿ ಯೋಜನೆಯ ಹಣ ನಿಮಗೆ ಮಂಜೂರಾಗಿದೆ ಎಂದು ಹೇಳಿ, ಬಿಡುಗಡೆಗೆ ಕಡತದ ಶುಲ್ಕ ಕಳುಹಿಸಲು ಕೇಳಲಾಗಿದೆ.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "ಹಣ + ಕಳುಹಿ",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-kn-13",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "prize scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ನಿಮ್ಮ ಸಂಖ್ಯೆ ಬಹುಮಾನ ಡ್ರಾದಲ್ಲಿ ಬಂದಿದೆ. ಬಹುಮಾನ ಜಮೆ ಮಾಡಲು ಬ್ಯಾಂಕ್ ಖಾತೆ ಸಂಖ್ಯೆ ಮತ್ತು ರಹಸ್ಯ ಅಂಕಗಳನ್ನು ಕಳುಹಿಸಿ.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-mx-01",
+      "language": "Mixed",
+      "selected_language": "English",
+      "category": "OTP theft",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "KYC update pending है; verify करने के लिए phone पर आया one-time code agent को पढ़कर बताओ.",
+      "effective_risk_score": 18,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "financial_impersonation"
+      ],
+      "matched_evidence": [
+        {
+          "category": "financial_impersonation",
+          "phrase": "kyc update",
+          "language": "English",
+          "points": 18
+        }
+      ]
+    },
+    {
+      "id": "ho-mx-05",
+      "language": "Mixed",
+      "selected_language": "Hindi",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ಸರ್ಕಾರಿ scholarship ಹಣ मंजूर है; release करने के लिए bank login इस site पर डालें http://student-aid.invalid/claim",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "http://student-aid.invalid/claim",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-mx-11",
+      "language": "Mixed",
+      "selected_language": "Hindi",
+      "category": "account threat",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "Your wallet बंद हो जाएगा अगर अभी PIN देकर verification नहीं किया.",
+      "effective_risk_score": 10,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "urgency"
+      ],
+      "matched_evidence": [
+        {
+          "category": "urgency",
+          "phrase": "अभी",
+          "language": "Hindi",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "ho-mx-12",
+      "language": "Mixed",
+      "selected_language": "Kannada",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ಜಿಲ್ಲಾ pension benefit ಸಿದ್ಧವಾಗಿದೆ; release ಮಾಡಲು processing fee ಪಾವತಿಸಿ.",
+      "effective_risk_score": 25,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "upfront_payment"
+      ],
+      "matched_evidence": [
+        {
+          "category": "upfront_payment",
+          "phrase": "processing fee",
+          "language": "English",
+          "points": 25
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "id": "ho-en-01",
+      "language": "English",
+      "selected_language": "English",
+      "category": "OTP theft",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "The courier cannot release your returned parcel until you read the six numbers in the text message to the driver.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-en-05",
+      "language": "English",
+      "selected_language": "English",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "The county assistance office has reserved a household rebate for you. Upload your bank login on http://benefit-check.invalid/apply to receive it.",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "http://benefit-check.invalid/apply",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-en-06",
+      "language": "English",
+      "selected_language": "English",
+      "category": "registration fee scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "Your interview is waived and the factory placement is guaranteed once you buy the required safety badge from our coordinator.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-en-09",
+      "language": "English",
+      "selected_language": "English",
+      "category": "suspicious URL",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "Security team asks you to review an unfamiliar sign-in at https://bit.ly/session-verify and enter the passcode there.",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "https://bit.ly/session-verify",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-en-10",
+      "language": "English",
+      "selected_language": "English",
+      "category": "payment scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "The utility refund is waiting, but the service charge must be transferred before midnight or the credit is cancelled.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "charge + transfer",
+          "language": "Hindi",
+          "points": 20
+        },
+        {
+          "category": "payment_request",
+          "phrase": "charge + transfer",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-en-12",
+      "language": "English",
+      "selected_language": "English",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "A message from the pension desk says a benefit is approved but asks for a small file-opening payment to unlock the funds.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "payment + pay",
+          "language": "Hindi",
+          "points": 20
+        },
+        {
+          "category": "payment_request",
+          "phrase": "payment + pay",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-en-21",
+      "language": "English",
+      "selected_language": "English",
+      "category": "safety warning",
+      "expected": "legitimate",
+      "predicted": "suspicious",
+      "message": "If a text urges you to reveal a password, ignore its link and visit the service through your saved bookmark.",
+      "effective_risk_score": 30,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info"
+      ],
+      "matched_evidence": [
+        {
+          "category": "sensitive_info",
+          "phrase": "password + text",
+          "language": "English",
+          "points": 30
+        },
+        {
+          "category": "sensitive_info",
+          "phrase": "password + text",
+          "language": "Kannada",
+          "points": 30
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-01",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "OTP theft",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "कूरियर वाला कह रहा है कि पार्सल लौटने से रोकने के लिए फोन पर आया छह अंकों का नंबर उसे बताना होगा।",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-hi-05",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "जिला राहत कार्यालय से लाभ राशि तैयार होने का संदेश आया है; इसे जारी कराने के लिए बैंक लॉगिन इस साइट पर दें: http://relief-portal.invalid/form",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "http://relief-portal.invalid/form",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-06",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "registration fee scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "बिना परीक्षा पक्की नियुक्ति मिलेगी; नियुक्ति पत्र खोलने के लिए समन्वयक को वर्दी किट का पैसा भेजें।",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-hi-09",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "suspicious URL",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "नए लॉगिन की जाँच के नाम पर https://tinyurl.com/account-care खोलकर अपना गुप्त कोड डालने को कहा गया है।",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "https://tinyurl.com/account-care",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-10",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "payment scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "आपकी बिजली जमा राशि वापस मिलेगी, लेकिन पहले आज रात सेवा खर्च भेजना जरूरी बताया गया है।",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "जमा राशि + जमा",
+          "language": "Hindi",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-12",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "पेंशन सहायता केंद्र ने सहायता मंजूर बताई है, मगर रकम पाने से पहले फाइल शुल्क जमा करने को कहा है।",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "रकम + जमा",
+          "language": "Hindi",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-hi-13",
+      "language": "Hindi",
+      "selected_language": "Hindi",
+      "category": "prize scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "खरीदारी प्रतियोगिता में विजेता चुने जाने का दावा है। पुरस्कार भेजने के लिए बैंक खाता और सुरक्षा अंक माँगे गए हैं।",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-kn-01",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "OTP theft",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ಕೊರಿಯರ್ ತಲುಪಿಸಲು ನಿಮ್ಮ ಫೋನ್‌ಗೆ ಬಂದ ಆರು ಅಂಕಿಗಳನ್ನು ಚಾಲಕನಿಗೆ ಓದಿ ಹೇಳಬೇಕೆಂದು ಸಂದೇಶ ಬಂದಿದೆ.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-kn-04",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "account takeover",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ನಿಮ್ಮ ಪ್ರೊಫೈಲ್‌ಗೆ ಮತ್ತೊಂದು ಸಾಧನ ಸೇರಿದೆ. ಬದಲಾವಣೆ ಹಿಂತೆಗೆದುಕೊಳ್ಳಲು ಕರೆ ಮಾಡಿದವರಿಗೆ ಮರುಪಡೆಯುವ ಗುಪ್ತ ಸಂಖ್ಯೆಯನ್ನು ನೀಡಿ.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-kn-05",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ತಾಲೂಕು ನೆರವು ಕಚೇರಿ ಪರಿಹಾರ ಹಣ ಸಿದ್ಧವೆಂದು ಹೇಳಿದೆ; ಪಡೆಯಲು ಬ್ಯಾಂಕ್ ಪ್ರವೇಶ ಮಾಹಿತಿಯನ್ನು ಈ ಜಾಲತಾಣದಲ್ಲಿ ತುಂಬಿ: http://aid-check.invalid/verify",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "http://aid-check.invalid/verify",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-kn-10",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "payment scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ನಿಮ್ಮ ಶುಲ್ಕ ಮರುಪಾವತಿ ಸಿದ್ಧವಿದೆ, ಆದರೆ ಅದನ್ನು ಪಡೆಯುವ ಮೊದಲು ಸೇವಾ ವೆಚ್ಚವನ್ನು ಇಂದೇ ವರ್ಗಾಯಿಸಬೇಕಂತೆ.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "ಶುಲ್ಕ + ಪಾವತಿ",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-kn-11",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "account threat",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ನಿಮ್ಮ ಡಿಜಿಟಲ್ ಪರ್ಸ್‌ನಿಂದ ಹಣ ಕಳುಹಿಸುವ ಸೌಲಭ್ಯವನ್ನು ಸ್ವಲ್ಪದಲ್ಲೇ ನಿಲ್ಲಿಸಲಾಗುತ್ತದೆ. ಮುಂದುವರಿಸಲು ಪಿನ್ ನೀಡಿ.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "ಹಣ + ಕಳುಹಿ",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-kn-12",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ಪಿಂಚಣಿ ಯೋಜನೆಯ ಹಣ ನಿಮಗೆ ಮಂಜೂರಾಗಿದೆ ಎಂದು ಹೇಳಿ, ಬಿಡುಗಡೆಗೆ ಕಡತದ ಶುಲ್ಕ ಕಳುಹಿಸಲು ಕೇಳಲಾಗಿದೆ.",
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ],
+      "matched_evidence": [
+        {
+          "category": "payment_request",
+          "phrase": "ಹಣ + ಕಳುಹಿ",
+          "language": "Kannada",
+          "points": 20
+        }
+      ]
+    },
+    {
+      "id": "ho-kn-13",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "prize scam",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ನಿಮ್ಮ ಸಂಖ್ಯೆ ಬಹುಮಾನ ಡ್ರಾದಲ್ಲಿ ಬಂದಿದೆ. ಬಹುಮಾನ ಜಮೆ ಮಾಡಲು ಬ್ಯಾಂಕ್ ಖಾತೆ ಸಂಖ್ಯೆ ಮತ್ತು ರಹಸ್ಯ ಅಂಕಗಳನ್ನು ಕಳುಹಿಸಿ.",
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [],
+      "matched_evidence": []
+    },
+    {
+      "id": "ho-kn-21",
+      "language": "Kannada",
+      "selected_language": "Kannada",
+      "category": "safety warning",
+      "expected": "legitimate",
+      "predicted": "suspicious",
+      "message": "ಅಪರಿಚಿತ ಸಂದೇಶವು ಗುಪ್ತಪದ ಕೇಳಿದರೆ ಅದರ ವಿಳಾಸ ತೆರೆಯಬೇಡಿ; ಅಧಿಕೃತ ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದಲೇ ಖಾತೆ ಪರಿಶೀಲಿಸಿ.",
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "account_verification",
+        "sensitive_info"
+      ],
+      "matched_evidence": [
+        {
+          "category": "account_verification",
+          "phrase": "ಖಾತೆ ಪರಿಶೀಲಿಸಿ",
+          "language": "Kannada",
+          "points": 15
+        },
+        {
+          "category": "sensitive_info",
+          "phrase": "ಗುಪ್ತಪದ + ಕೇಳಿ",
+          "language": "Kannada",
+          "points": 30
+        }
+      ]
+    },
+    {
+      "id": "ho-mx-01",
+      "language": "Mixed",
+      "selected_language": "English",
+      "category": "OTP theft",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "KYC update pending है; verify करने के लिए phone पर आया one-time code agent को पढ़कर बताओ.",
+      "effective_risk_score": 18,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "financial_impersonation"
+      ],
+      "matched_evidence": [
+        {
+          "category": "financial_impersonation",
+          "phrase": "kyc update",
+          "language": "English",
+          "points": 18
+        }
+      ]
+    },
+    {
+      "id": "ho-mx-05",
+      "language": "Mixed",
+      "selected_language": "Hindi",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ಸರ್ಕಾರಿ scholarship ಹಣ मंजूर है; release करने के लिए bank login इस site पर डालें http://student-aid.invalid/claim",
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ],
+      "matched_evidence": [
+        {
+          "category": "suspicious_url",
+          "phrase": "http://student-aid.invalid/claim",
+          "language": "Language-independent",
+          "points": 15
+        }
+      ]
+    },
+    {
+      "id": "ho-mx-11",
+      "language": "Mixed",
+      "selected_language": "Hindi",
+      "category": "account threat",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "Your wallet बंद हो जाएगा अगर अभी PIN देकर verification नहीं किया.",
+      "effective_risk_score": 10,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "urgency"
+      ],
+      "matched_evidence": [
+        {
+          "category": "urgency",
+          "phrase": "अभी",
+          "language": "Hindi",
+          "points": 10
+        }
+      ]
+    },
+    {
+      "id": "ho-mx-12",
+      "language": "Mixed",
+      "selected_language": "Kannada",
+      "category": "government impersonation",
+      "expected": "suspicious",
+      "predicted": "legitimate",
+      "message": "ಜಿಲ್ಲಾ pension benefit ಸಿದ್ಧವಾಗಿದೆ; release ಮಾಡಲು processing fee ಪಾವತಿಸಿ.",
+      "effective_risk_score": 25,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "upfront_payment"
+      ],
+      "matched_evidence": [
+        {
+          "category": "upfront_payment",
+          "phrase": "processing fee",
+          "language": "English",
+          "points": 25
+        }
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "ho-en-01",
+      "language": "English",
+      "category": "OTP theft",
+      "label": "suspicious",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-02",
+      "language": "English",
+      "category": "password theft",
+      "label": "suspicious",
+      "risk_score": 45,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-en-03",
+      "language": "English",
+      "category": "bank impersonation",
+      "label": "suspicious",
+      "risk_score": 45,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "account_threat",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-en-04",
+      "language": "English",
+      "category": "account takeover",
+      "label": "suspicious",
+      "risk_score": 30,
+      "effective_risk_score": 30,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info"
+      ]
+    },
+    {
+      "id": "ho-en-05",
+      "language": "English",
+      "category": "government impersonation",
+      "label": "suspicious",
+      "risk_score": 15,
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-en-06",
+      "language": "English",
+      "category": "registration fee scam",
+      "label": "suspicious",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-07",
+      "language": "English",
+      "category": "job fee scam",
+      "label": "suspicious",
+      "risk_score": 40,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "job_reward",
+        "upfront_payment"
+      ]
+    },
+    {
+      "id": "ho-en-08",
+      "language": "English",
+      "category": "prize scam",
+      "label": "suspicious",
+      "risk_score": 35,
+      "effective_risk_score": 35,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "payment_request",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-en-09",
+      "language": "English",
+      "category": "suspicious URL",
+      "label": "suspicious",
+      "risk_score": 15,
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-en-10",
+      "language": "English",
+      "category": "payment scam",
+      "label": "suspicious",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-en-11",
+      "language": "English",
+      "category": "account threat",
+      "label": "suspicious",
+      "risk_score": 30,
+      "effective_risk_score": 30,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info"
+      ]
+    },
+    {
+      "id": "ho-en-12",
+      "language": "English",
+      "category": "government impersonation",
+      "label": "suspicious",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-en-13",
+      "language": "English",
+      "category": "prize scam",
+      "label": "suspicious",
+      "risk_score": 63,
+      "effective_risk_score": 75,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "financial_impersonation",
+        "reward_scam"
+      ]
+    },
+    {
+      "id": "ho-en-14",
+      "language": "English",
+      "category": "bank notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-15",
+      "language": "English",
+      "category": "bank notification",
+      "label": "legitimate",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-en-16",
+      "language": "English",
+      "category": "college announcement",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-17",
+      "language": "English",
+      "category": "college announcement",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-18",
+      "language": "English",
+      "category": "job notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-19",
+      "language": "English",
+      "category": "job notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-20",
+      "language": "English",
+      "category": "safety warning",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-21",
+      "language": "English",
+      "category": "safety warning",
+      "label": "legitimate",
+      "risk_score": 30,
+      "effective_risk_score": 30,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info"
+      ]
+    },
+    {
+      "id": "ho-en-22",
+      "language": "English",
+      "category": "payment notification",
+      "label": "legitimate",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-en-23",
+      "language": "English",
+      "category": "normal URL",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-24",
+      "language": "English",
+      "category": "normal message",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-en-25",
+      "language": "English",
+      "category": "account notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-01",
+      "language": "Hindi",
+      "category": "OTP theft",
+      "label": "suspicious",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-02",
+      "language": "Hindi",
+      "category": "password theft",
+      "label": "suspicious",
+      "risk_score": 45,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-hi-03",
+      "language": "Hindi",
+      "category": "bank impersonation",
+      "label": "suspicious",
+      "risk_score": 75,
+      "effective_risk_score": 90,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "account_threat",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-hi-04",
+      "language": "Hindi",
+      "category": "account takeover",
+      "label": "suspicious",
+      "risk_score": 60,
+      "effective_risk_score": 75,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "account_threat"
+      ]
+    },
+    {
+      "id": "ho-hi-05",
+      "language": "Hindi",
+      "category": "government impersonation",
+      "label": "suspicious",
+      "risk_score": 15,
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-hi-06",
+      "language": "Hindi",
+      "category": "registration fee scam",
+      "label": "suspicious",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-07",
+      "language": "Hindi",
+      "category": "job fee scam",
+      "label": "suspicious",
+      "risk_score": 70,
+      "effective_risk_score": 75,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "account_threat",
+        "job_reward",
+        "upfront_payment"
+      ]
+    },
+    {
+      "id": "ho-hi-08",
+      "language": "Hindi",
+      "category": "prize scam",
+      "label": "suspicious",
+      "risk_score": 55,
+      "effective_risk_score": 60,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "reward_scam",
+        "upfront_payment",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-hi-09",
+      "language": "Hindi",
+      "category": "suspicious URL",
+      "label": "suspicious",
+      "risk_score": 15,
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-hi-10",
+      "language": "Hindi",
+      "category": "payment scam",
+      "label": "suspicious",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-hi-11",
+      "language": "Hindi",
+      "category": "account threat",
+      "label": "suspicious",
+      "risk_score": 80,
+      "effective_risk_score": 95,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "account_threat",
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-hi-12",
+      "language": "Hindi",
+      "category": "government impersonation",
+      "label": "suspicious",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-hi-13",
+      "language": "Hindi",
+      "category": "prize scam",
+      "label": "suspicious",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-14",
+      "language": "Hindi",
+      "category": "bank notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-15",
+      "language": "Hindi",
+      "category": "bank notification",
+      "label": "legitimate",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-hi-16",
+      "language": "Hindi",
+      "category": "college announcement",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-17",
+      "language": "Hindi",
+      "category": "college announcement",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-18",
+      "language": "Hindi",
+      "category": "job notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-19",
+      "language": "Hindi",
+      "category": "job notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-20",
+      "language": "Hindi",
+      "category": "safety warning",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-21",
+      "language": "Hindi",
+      "category": "safety warning",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-22",
+      "language": "Hindi",
+      "category": "payment notification",
+      "label": "legitimate",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-hi-23",
+      "language": "Hindi",
+      "category": "normal URL",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-24",
+      "language": "Hindi",
+      "category": "normal message",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-hi-25",
+      "language": "Hindi",
+      "category": "account notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-01",
+      "language": "Kannada",
+      "category": "OTP theft",
+      "label": "suspicious",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-02",
+      "language": "Kannada",
+      "category": "password theft",
+      "label": "suspicious",
+      "risk_score": 75,
+      "effective_risk_score": 90,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "account_threat",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-kn-03",
+      "language": "Kannada",
+      "category": "bank impersonation",
+      "label": "suspicious",
+      "risk_score": 93,
+      "effective_risk_score": 100,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "account_threat",
+        "financial_impersonation",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-kn-04",
+      "language": "Kannada",
+      "category": "account takeover",
+      "label": "suspicious",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-05",
+      "language": "Kannada",
+      "category": "government impersonation",
+      "label": "suspicious",
+      "risk_score": 15,
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-kn-06",
+      "language": "Kannada",
+      "category": "registration fee scam",
+      "label": "suspicious",
+      "risk_score": 40,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "job_reward",
+        "upfront_payment"
+      ]
+    },
+    {
+      "id": "ho-kn-07",
+      "language": "Kannada",
+      "category": "job fee scam",
+      "label": "suspicious",
+      "risk_score": 40,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "job_reward",
+        "upfront_payment"
+      ]
+    },
+    {
+      "id": "ho-kn-08",
+      "language": "Kannada",
+      "category": "prize scam",
+      "label": "suspicious",
+      "risk_score": 55,
+      "effective_risk_score": 60,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "reward_scam",
+        "upfront_payment",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-kn-09",
+      "language": "Kannada",
+      "category": "suspicious URL",
+      "label": "suspicious",
+      "risk_score": 45,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-kn-10",
+      "language": "Kannada",
+      "category": "payment scam",
+      "label": "suspicious",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-kn-11",
+      "language": "Kannada",
+      "category": "account threat",
+      "label": "suspicious",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-kn-12",
+      "language": "Kannada",
+      "category": "government impersonation",
+      "label": "suspicious",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-kn-13",
+      "language": "Kannada",
+      "category": "prize scam",
+      "label": "suspicious",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-14",
+      "language": "Kannada",
+      "category": "bank notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-15",
+      "language": "Kannada",
+      "category": "bank notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-16",
+      "language": "Kannada",
+      "category": "college announcement",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-17",
+      "language": "Kannada",
+      "category": "college announcement",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-18",
+      "language": "Kannada",
+      "category": "job notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-19",
+      "language": "Kannada",
+      "category": "job notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-20",
+      "language": "Kannada",
+      "category": "safety warning",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-21",
+      "language": "Kannada",
+      "category": "safety warning",
+      "label": "legitimate",
+      "risk_score": 45,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "account_verification",
+        "sensitive_info"
+      ]
+    },
+    {
+      "id": "ho-kn-22",
+      "language": "Kannada",
+      "category": "payment notification",
+      "label": "legitimate",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-kn-23",
+      "language": "Kannada",
+      "category": "normal URL",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-24",
+      "language": "Kannada",
+      "category": "normal message",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-kn-25",
+      "language": "Kannada",
+      "category": "account notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-01",
+      "language": "Mixed",
+      "category": "OTP theft",
+      "label": "suspicious",
+      "risk_score": 18,
+      "effective_risk_score": 18,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "financial_impersonation"
+      ]
+    },
+    {
+      "id": "ho-mx-02",
+      "language": "Mixed",
+      "category": "password theft",
+      "label": "suspicious",
+      "risk_score": 45,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-mx-03",
+      "language": "Mixed",
+      "category": "bank impersonation",
+      "label": "suspicious",
+      "risk_score": 63,
+      "effective_risk_score": 75,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "financial_impersonation",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-mx-04",
+      "language": "Mixed",
+      "category": "account takeover",
+      "label": "suspicious",
+      "risk_score": 30,
+      "effective_risk_score": 30,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info"
+      ]
+    },
+    {
+      "id": "ho-mx-05",
+      "language": "Mixed",
+      "category": "government impersonation",
+      "label": "suspicious",
+      "risk_score": 15,
+      "effective_risk_score": 15,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-mx-06",
+      "language": "Mixed",
+      "category": "registration fee scam",
+      "label": "suspicious",
+      "risk_score": 40,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "job_reward",
+        "upfront_payment"
+      ]
+    },
+    {
+      "id": "ho-mx-07",
+      "language": "Mixed",
+      "category": "job fee scam",
+      "label": "suspicious",
+      "risk_score": 40,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "job_reward",
+        "upfront_payment"
+      ]
+    },
+    {
+      "id": "ho-mx-08",
+      "language": "Mixed",
+      "category": "prize scam",
+      "label": "suspicious",
+      "risk_score": 55,
+      "effective_risk_score": 60,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "reward_scam",
+        "upfront_payment",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-mx-09",
+      "language": "Mixed",
+      "category": "suspicious URL",
+      "label": "suspicious",
+      "risk_score": 45,
+      "effective_risk_score": 45,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "suspicious_url"
+      ]
+    },
+    {
+      "id": "ho-mx-10",
+      "language": "Mixed",
+      "category": "payment scam",
+      "label": "suspicious",
+      "risk_score": 30,
+      "effective_risk_score": 30,
+      "effective_risk_level": "MEDIUM RISK",
+      "detected_categories": [
+        "payment_request",
+        "urgency"
+      ]
+    },
+    {
+      "id": "ho-mx-11",
+      "language": "Mixed",
+      "category": "account threat",
+      "label": "suspicious",
+      "risk_score": 10,
+      "effective_risk_score": 10,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "urgency"
+      ]
+    },
+    {
+      "id": "ho-mx-12",
+      "language": "Mixed",
+      "category": "government impersonation",
+      "label": "suspicious",
+      "risk_score": 25,
+      "effective_risk_score": 25,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "upfront_payment"
+      ]
+    },
+    {
+      "id": "ho-mx-13",
+      "language": "Mixed",
+      "category": "prize scam",
+      "label": "suspicious",
+      "risk_score": 63,
+      "effective_risk_score": 75,
+      "effective_risk_level": "HIGH RISK",
+      "detected_categories": [
+        "sensitive_info",
+        "financial_impersonation",
+        "reward_scam"
+      ]
+    },
+    {
+      "id": "ho-mx-14",
+      "language": "Mixed",
+      "category": "bank notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-15",
+      "language": "Mixed",
+      "category": "bank notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-16",
+      "language": "Mixed",
+      "category": "college announcement",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-17",
+      "language": "Mixed",
+      "category": "college announcement",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-18",
+      "language": "Mixed",
+      "category": "job notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-19",
+      "language": "Mixed",
+      "category": "job notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-20",
+      "language": "Mixed",
+      "category": "safety warning",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-21",
+      "language": "Mixed",
+      "category": "safety warning",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-22",
+      "language": "Mixed",
+      "category": "payment notification",
+      "label": "legitimate",
+      "risk_score": 20,
+      "effective_risk_score": 20,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": [
+        "payment_request"
+      ]
+    },
+    {
+      "id": "ho-mx-23",
+      "language": "Mixed",
+      "category": "normal URL",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-24",
+      "language": "Mixed",
+      "category": "normal message",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    },
+    {
+      "id": "ho-mx-25",
+      "language": "Mixed",
+      "category": "account notification",
+      "label": "legitimate",
+      "risk_score": 0,
+      "effective_risk_score": 0,
+      "effective_risk_level": "LOW RISK",
+      "detected_categories": []
+    }
+  ]
+}

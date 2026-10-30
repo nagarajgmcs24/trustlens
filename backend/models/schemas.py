@@ -23,6 +23,7 @@ class AnalysisRequest(BaseModel):
     language: str = Field("English")
     sender_name: Optional[str] = Field(None, max_length=200)
     sender_email: Optional[str] = Field(None, max_length=200)
+    claimed_organization: Optional[str] = Field(None, max_length=120)
 
     @field_validator("channel")
     @classmethod

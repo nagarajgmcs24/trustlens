@@ -134,11 +134,13 @@ Example request:
   "message": "Your account is suspended. Verify your KYC immediately.",
   "channel": "SMS",
   "language": "English",
-  "sender_name": "Example sender"
+  "claimed_organization": "Example Bank",
+  "sender_name": "Example sender",
+  "sender_email": "alerts@example.com"
 }
 ```
 
-`message` is required (10–5000 characters); `channel` may be SMS, WhatsApp, Email, or Other; `language` may be English, Hindi, or Kannada (default: English). The response includes the selected `channel` and `language`, a `language_support` note, `risk_score`, `risk_level`, `detected_categories`, `suspicious_keywords`, `suspicious_urls`, `explanations`, `recommendations`, and supporting evidence.
+`message` is required (10–5000 characters); `channel` may be SMS, WhatsApp, Email, or Other; `language` may be English, Hindi, or Kannada (default: English). Optional `claimed_organization`, `sender_name`, and `sender_email` values support heuristic sender/domain mismatch checks. Missing sender details do not add risk by themselves. `risk_score` and `risk_level` are the evidence-only score and classification; `effective_risk_score` and `effective_risk_level` include contextual combination and sender mismatch bonuses. The response also includes detected categories, matched evidence, explanations, and recommendations.
 
 ### `GET /api/history`
 
@@ -152,11 +154,11 @@ Clears analysis history in development only. It returns 404 in production until 
 
 ## Database
 
-When configured, PyMongo connects to the `trustlens` database and uses `analysis_history`. A ping is performed before database operations. Saved fields are limited to analysis ID, timestamp, channel, risk level, score, and detected categories. The original message is not persisted. If the connection is unavailable, analysis continues and the backend uses an in-memory history fallback; this fallback is cleared when the backend process stops.
+When configured, PyMongo connects to the `trustlens` database and uses `analysis_history`. A ping is performed before database operations. Saved fields are limited to analysis ID, timestamp, channel, effective risk level and score, and detected categories. Sender fields and the original message are not persisted. If the connection is unavailable, analysis continues and the backend uses an in-memory history fallback; this fallback is cleared when the backend process stops.
 
 ## Detection and scoring
 
-The engine applies Unicode-normalized phrase rules for account threats, urgency, specific time pressure, sensitive-information requests, financial/government impersonation, upfront job fees, prizes/rewards, money requests, and suspicious URLs. English, Hindi, and Kannada have language-specific curated rules; Hindi and Kannada coverage is limited, and none of the rule sets is comprehensive. The response includes each detected category, matched phrase, selected language, explanation, points, and recommended safe action. A category contributes at most once to the score, overlapping phrases within a category do not stack, and the final total is capped at 100. A shortener alone adds only a low-weight signal; dates and ordinary time references are not treated as urgency by themselves.
+The engine applies Unicode-normalized phrase rules for account threats, urgency, specific time pressure, sensitive-information requests, financial/government impersonation, upfront job fees, prizes/rewards, money requests, and suspicious URLs. Context rules combine related signals while applying only the strongest matching combination bonus, so overlapping patterns do not stack the same signals repeatedly. Targeted English, Hindi, and Kannada negation patterns suppress certain warnings such as “never share your OTP” or “no fee is required.” Sender-domain mismatch checks compare a user-supplied claimed organization and sender email against a small static list; they do not verify email authenticity, domain ownership, or a sender's identity. Hindi and Kannada coverage remains limited and none of the rule sets is comprehensive. The response includes each detected category, matched phrase, phrase language, explanation, points, and recommended safe action. A category contributes at most once to the evidence score, overlapping phrases within a category do not stack, and the effective score is capped at 100. A shortener alone adds only a low-weight signal; dates and ordinary time references are not treated as urgency by themselves.
 
 - 0–29: LOW RISK
 - 30–59: MEDIUM RISK
@@ -180,10 +182,10 @@ The current synthetic multilingual validation corpus and measured results are do
 
 ## Limitations
 
-- Keyword rules do not understand full context, language nuance, or novel scam techniques.
+- Keyword rules and scoped negation patterns do not understand full context, language nuance, or novel scam techniques.
 - URL heuristics do not verify reputation, redirect destinations, or page contents.
 - HTTPS alone does not mean a URL is trustworthy.
-- Sender identity and domain ownership are not independently validated.
+- Sender identity and domain ownership are not independently validated; mismatch checks are heuristic and use a non-exhaustive static list.
 - Offline history is in memory and is not durable.
 - The application is a demo aid, not a substitute for security professionals or official verification.
 

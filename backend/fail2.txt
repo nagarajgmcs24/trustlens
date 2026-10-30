@@ -1,0 +1,32 @@
+============================= test session starts =============================
+platform win32 -- Python 3.14.4, pytest-9.2.0, pluggy-1.7.0 -- C:\TRUSTLENS\backend\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\TRUSTLENS\backend
+plugins: anyio-4.15.1
+collecting ... collected 7 items
+
+tests/test_context_engine.py::TestFalsePositivePrevention::test_bank_mention_without_request_or_threat_is_low_risk PASSED [ 14%]
+tests/test_context_engine.py::TestFalsePositivePrevention::test_government_scheme_advertisement_is_low_risk PASSED [ 28%]
+tests/test_context_engine.py::TestFalsePositivePrevention::test_prize_without_payment_or_url_is_medium_not_high PASSED [ 42%]
+tests/test_context_engine.py::TestFalsePositivePrevention::test_college_deadline_today_not_urgency_threat PASSED [ 57%]
+tests/test_context_engine.py::TestFalsePositivePrevention::test_otp_warning_not_sharing_is_low_risk FAILED [ 71%]
+tests/test_context_engine.py::TestFalsePositivePrevention::test_every_job_ad_not_automatically_high PASSED [ 85%]
+tests/test_context_engine.py::TestFalsePositivePrevention::test_hr_email_with_joining_date_is_low_risk FAILED [100%]
+
+================================== FAILURES ===================================
+____ TestFalsePositivePrevention.test_otp_warning_not_sharing_is_low_risk _____
+tests\test_context_engine.py:637: in test_otp_warning_not_sharing_is_low_risk
+    assert "sensitive_info" not in _categories(result)
+E   AssertionError: assert 'sensitive_info' not in {'sensitive_info'}
+E    +  where {'sensitive_info'} = _categories({'analysis_id': 'TRUST-20261030171919913957', 'timestamp': '2026-10-30T17:19:19.913975+00:00', 'channel': 'Other', 'language': 'English', ...})
+___ TestFalsePositivePrevention.test_hr_email_with_joining_date_is_low_risk ___
+tests\test_context_engine.py:655: in test_hr_email_with_joining_date_is_low_risk
+    assert _base_level(result) == "LOW RISK"
+E   AssertionError: assert 'MEDIUM RISK' == 'LOW RISK'
+E     
+E     - LOW RISK
+E     + MEDIUM RISK
+=========================== short test summary info ===========================
+FAILED tests/test_context_engine.py::TestFalsePositivePrevention::test_otp_warning_not_sharing_is_low_risk
+FAILED tests/test_context_engine.py::TestFalsePositivePrevention::test_hr_email_with_joining_date_is_low_risk
+========================= 2 failed, 5 passed in 0.30s =========================
